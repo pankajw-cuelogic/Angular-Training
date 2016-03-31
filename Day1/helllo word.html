@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<script src="D:\Angular Training\Angular-Training\Day1\angular.min.js"></script>
+<body>
+
+<div ng-app=""> 
+<form name="myform">
+<p>Concat Demo app:</p>
+<p>First Name : <input type="text" name="firsname" ng-model="firsname" placeholder="Enter First Name" required>
+<span ng-show="myform.firsname.$error.required">Please enter First Name</span></p>
+<p>Last Name: <input type="text" name="lastname" ng-model="lastname" placeholder="Enter Last Name" required>
+<span ng-show="myform.lastname.$error.required">Please enter Last Name</span></p>
+<h1>Full Name: {{firsname}} {{lastname}}</h1>
+  </form>
+</div>
+</body>
+</html>
