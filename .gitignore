@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/platform/Platform.Web/Content/images/theme/middle-school-header.psd
+/platform/Platform.Web/Content/images/theme/middle-school-header2.psd
+/platform/packages/dotless.1.5.2
+/platform/Platform.Web/Content/images/images.zip
+/platform/Platform.Web/Scripts/pages/resumeBuilder.js
+/platform/Platform.Web/Content/css/pages/resumeBuilder.less

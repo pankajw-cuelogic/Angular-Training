@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<script src="scripts/angular.min.js"></script>
+<script src="app.js"></script>
+<html>
+<body>
+    <div ng-app="myApp" ng-controller="personCtrl">
+        <h1>My First Demo App</h1>
+        <form name="myform">
+            First Name: <input type="text" name="firstName" ng-model="firstName" placeholder="Enter First Name" required><br>
+            <p><span ng-show="myform.firstName.$error.required">Please enter First Name</span></p>
+            Last Name: <input type="text" name="lastName" ng-model="lastName" placeholder="Enter Last Name" required><br>
+            <p><span ng-show="myform.lastName.$error.required">Please enter Last Name</span></p>
+            <br>
+            <p ng-bind="fullName()"></p>
+        </form>
+    </div>
+    <script src="app/controller/personController.js"></script>
+</body>
+</html>
