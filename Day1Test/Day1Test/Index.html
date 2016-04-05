@@ -1,19 +1,28 @@
 ﻿<!DOCTYPE html>
 <script src="scripts/angular.min.js"></script>
+<script src="../../scripts/angular-route.min.js"></script>
 <script src="../../app.js"></script>
 <html>
-<body>
-    <div ng-app="myApp" ng-controller="personCtrl">
-        <h1>My First Demo App</h1>
-        <form name="myform">
-            First Name: <input type="text" name="firstName" ng-model="firstName" placeholder="Enter First Name" required><br>
-            <p><span ng-show="myform.firstName.$error.required">Please enter First Name</span></p>
-            Last Name: <input type="text" name="lastName" ng-model="lastName" placeholder="Enter Last Name" required><br>
-            <p><span ng-show="myform.lastName.$error.required">Please enter Last Name</span></p>
-            <br>
-            <p ng-bind="fullName()"></p>
-        </form>
-    </div>
-    <script src="app/scripts/controller/personController.js"></script>
+<body ng-app="sampleApp" ng-controller="personCtrl">
+    <a href="#/home">Home</a><br />
+    <a href="#/about">About</a><br />
+    
+
+        <div ng-controller="personCtrl">
+            <h1>My First Demo App Concatination with routing</h1>
+            <form name="myform">
+                First Name: <input type="text" name="firstName" ng-model="firstName" placeholder="Enter First Name" required><br>
+                <p><span ng-show="myform.firstName.$error.required">Please enter First Name</span></p>
+                Last Name: <input type="text" name="lastName" ng-model="lastName" placeholder="Enter Last Name" required><br>
+                <p><span ng-show="myform.lastName.$error.required">Please enter Last Name</span></p>
+                <br>
+                <p ng-bind="fullName()"></p>
+            </form>
+        </div>
+
+    <div ng-view></div>
+
+        <script src="app/scripts/controller/personController.js"></script>
+    <script src="app/scripts/controller/routeController.js"></script>
 </body>
 </html>
