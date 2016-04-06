@@ -3,17 +3,17 @@
         $routeProvider.
             when('/home', {
                 templateUrl: 'app/views/pages/Home.html',
-                controller: 'RouteController'
+                controller: 'routeController'
             }).
             when('/about', {
                 templateUrl: 'app/views/pages/About.html',
-                controller: 'RouteController'
+                controller: 'routeController'
             }).
             otherwise({
                 redirectTo: '/'
             });
     }]);
 
-module.controller("RouteController", function ($scope) {
+module.controller("routeController", function ($scope) {
 
 })
