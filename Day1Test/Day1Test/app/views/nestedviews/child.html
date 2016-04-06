@@ -1,3 +1,6 @@
-<div>
-{{textTodisplay1}}
+<div ng-app="demoApp">
+    {{textTodisplayInChild}}
+    <div>  <label>Data from parent controller : </label>  
+        <span ng-bind="$parent.textTodisplay"></span>
+    </div>
 </div>
