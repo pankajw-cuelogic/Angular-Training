@@ -1,20 +1,46 @@
-﻿<!DOCTYPE html>
+﻿<!--<!DOCTYPE html>
 <html ng-app="demoApp">
 <head>
-    <!--<script>-->
+    <!--<script>-- >
     <script src="scripts/angular.min.js"></script>
     <script src="scripts/angular-ui-router.js"></script>
     <script src="scripts/angular-route.min.js"></script>
 </head>
 <body>
-    <!--<state provider link>-->
+    <!--<state provider link>-- >
     <a ui-sref="parent">Parent</a><br />
     <a ui-sref="parent.child">Child</a><br />
     <script src="app.js"></script>
-    <!--<controller>-->
+    <!--<controller>-- >
     <script src="app/scripts/controller/childController.js"></script>
     <script src="app/scripts/controller/parentController.js"></script>
-    <!--<ui-view for rendering parent view>-->
-    <div ui-view></div> 
+    <!--<ui-view for rendering parent view>-- >
+    <div ui-view></div>
+</body>
+</html>-->
+
+
+<html>
+<head>     
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-ui-router.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="app/scripts/services/service.js"></script>
+    <script src="app/scripts/controller/zeroController.js"></script>
+    <script src="app/scripts/controller/twoController.js"></script>
+    <script src="app/scripts/controller/oneController.js"></script>
+</head>
+<body ng-app="myModule">
+    <div ui-view></div>
+    <div ng-controller="zeroController">
+        <input ng-model="message" style="width:300px">
+        <button ng-click="handleClick(message);" >LOG Data</button>
+    </div>
+    <div ng-controller="oneController">
+        <input ng-model="message" style="width:300px">
+    </div>
+    <div ng-controller="twoController">
+        <input ng-model="message" style="width:300px">
+    </div>
 </body>
 </html>
